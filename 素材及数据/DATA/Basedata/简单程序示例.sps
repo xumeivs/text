@@ -1,0 +1,16 @@
+SET SEED 1.
+INPUT PROGRAM.
+     LOOP #LOP=1 TO 50.
+            COMPUTE A= RV.NORMAL(0,1).
+            END CASE.
+     END LOOP.
+     END FILE.
+END INPUT PROGRAM.
+EXECUTE.
+DO IF (A>=0).
+      COMPUTE B = A.
+ELSE.	
+      COMPUTE B = A*2.
+END IF.	
+EXECUTE.
+LIST.	
